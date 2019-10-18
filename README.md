@@ -2,7 +2,7 @@
 
 10/18/19
 
-### Rob McMahon
+### Rob McMahon (mcmahonrob19@gmail.com)
 
 - Python / Swift
 - Web - JavaScript, PHP, node.js, MySQL, Firebase, html / css
@@ -20,8 +20,8 @@
 
 ### Reece Partridge
 
-- Java 
-- Ruby 
+- Java
+- Ruby
 - C
 - html / css
 - JavaScript
