@@ -12,3 +12,8 @@
 - Unity 3D/2D; C#, Java (ewww)
 - React Native (cross platform app development)
 
+### Sim Singh
+
+- Python
+- C++
+- IoT
