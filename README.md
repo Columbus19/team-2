@@ -1,0 +1,8 @@
+# Team 2
+
+10/18/19
+
+### Rob McMahon
+
+- Python / Swift
+- Web - JavaScript, PHP, node.js, MySQL, Firebase, html / css
