@@ -17,3 +17,11 @@
 - Python
 - C++
 - IoT
+
+### Reece Partridge
+
+- Java 
+- Ruby 
+- C
+- html / css
+- JavaScript
