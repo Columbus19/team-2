@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Sign from './Sign.js';
-import Sign2 from './Sign2.js';
+import SignType from './SignType.js';
 
 class HomeScreen extends React.Component {
   render() {
@@ -23,7 +23,7 @@ const AppNavigator = createStackNavigator({
       screen: Sign
   },
   SignType: { 
-      screen: Sign2
+      screen: SignType
   }
 }, {initialRouteName: "SignP"});
 
