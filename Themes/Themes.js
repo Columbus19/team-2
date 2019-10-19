@@ -1,26 +1,21 @@
 import React from 'react'
-import {Text, StyleSheet, View} from 'react-native' 
+import {Text, StyleSheet, View, TouchableOpacity} from 'react-native' 
 import { Button } from 'react-native-elements';
 import colors from './Colors.js'
 import { CheckBox } from 'react-native-elements'
 
 const styles = StyleSheet.create({
     main: {
-      textAlign :
-       "center",
       color: colors['primary'],
       fontWeight: 'bold',
       fontSize: 60,
-      marginTop: -40
     },
 
     container: {
-        flexWrap : "wrap",
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'flex-start',
         justifyContent: 'space-around',
-      
       },
 
     h2 : {
@@ -88,9 +83,26 @@ class Checky extends React.PureComponent {
             checkedColor='gold'
             backgroundColor = 'black'
             checked={this.props.checked}
-            containerStyle = {{borderRadius: 10, borderWidth : 2, borderColor : 'gold'}}
+            containerStyle = {{borderRadius: 10, borderWidth : 2, borderColor : 'gold', flex: .1}}
             textStyle = {{color : 'blue', fontWeight : 'bold'}}
           />)
+    }
+}
+
+class CButton extends React.PureComponent {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return(
+            <TouchableOpacity style={{backgroundColor:"gold", flex: .9, textAlign :"center", justifyContent: 'center', alignContent : 'center',
+            }}
+            onPress = {this.props.onPress}
+            >
+                <Text style={{fontSize: 20, color: 'blue'}}>{this.props.text}</Text>
+             </TouchableOpacity>
+        )
     }
 }
 
@@ -117,4 +129,6 @@ class SButton extends React.PureComponent {
 }
 
 
-export {TitleText, RootContainer, BodyText, PTitle, Checky, SButton}
+
+
+export {TitleText, RootContainer, BodyText, PTitle, Checky, SButton, CButton}

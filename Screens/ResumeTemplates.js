@@ -25,10 +25,9 @@ export default class SignInit extends React.Component {
     
   render() {
     return (
-      <View style={styles.container}>
-          <View>
-            <TitleText text="Resume Templates"></TitleText>        
-          </View>
+      <View style= {{justifyContent: 'center', alignContent: 'center'}}>
+          <TitleText text="Resume Templates"/>        
+
           <SButton title="View Resume Templates"
                 onPress={() => { Linking.openURL('https://templates.office.com/en-us/resumes-and-cover-letters')}}
                 />

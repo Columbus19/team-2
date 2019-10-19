@@ -10,16 +10,16 @@ export default class SignType extends React.Component {
   render() {
     return (
       <RootContainer>
-          <TitleText text="Who are you?"></TitleText>
+            <TitleText text="Who are you?"></TitleText>
    
-      
           <SButton title="Student"
           onPress={() => {
-            const resetAction = StackActions.reset({
+            this.props.navigation.navigate('LearningAcademy')
+            /*const resetAction = StackActions.reset({
               index: 0,
               actions: [NavigationActions.navigate({ routeName: 'LearningAcademy' })],
             });
-            this.props.navigation.dispatch(resetAction);
+            this.props.navigation.dispatch(resetAction); */
           }}
           />
  
