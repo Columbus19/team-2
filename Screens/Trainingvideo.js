@@ -21,7 +21,7 @@ export default class Trainingvideo extends Component {
   render() {
     return (
         <View style={{ height: 675, backgroundColor: colors['bgcolor'], alignContent: 'center',  }}>
-          
+
             <View style={{marginBottom: 15, marginTop: 5}}>
               <PTitle text="Complete 2 Trainings!"></PTitle>
             </View>
