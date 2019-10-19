@@ -25,9 +25,19 @@ export default class SignType extends React.Component {
  
           <SButton title="Alumni"
             onPress={() => {this.props.navigation.navigate('Alumni')}}
+            /*const resetAction = StackActions.reset({
+              index: 0,
+              actions: [NavigationActions.navigate({ routeName: 'LearningAcademy' })],
+            });
+            this.props.navigation.dispatch(resetAction); */
           />
 
-          <SButton title="Client" onPress={() => {this.props.navigation.navigate('Client')}}/>
+          <SButton title="Client" onPress={() => {this.props.navigation.navigate('Client')
+          /*const resetAction = StackActions.reset({
+                index: 0,
+                actions: [NavigationActions.navigate({ routeName: 'LearningAcademy' })],
+              });
+              this.props.navigation.dispatch(resetAction); */}}/>
 
       </RootContainer>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import SignInit from './Screens/SignInit.js';
@@ -13,7 +13,7 @@ import ResumeTemplates from './Screens/ResumeTemplates.js'
 import Application from './Screens/Application/Application1.js'
 import BasicFlatList from './Screens/BasicFlatList.js'
 import Application1 from './Screens/Application/Application1.js';
-
+import colors from './Themes/Colors.js'
 
 class Loader extends React.Component{  
   render() {
@@ -63,7 +63,31 @@ const AppNavigator = createStackNavigator({
   Client: {
       screen: BasicFlatList 
   }
-}, {initialRouteName: "SignInit"});
+  
+}, {initialRouteName: "SignInit",
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: colors['primary'],
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+      headerTitle: (
+        <View style={{flexDirection: "row"}}>
+          <Image source={require('./assets/images/splash3.png')}
+                style={{
+                  width:50,
+                  height:50,
+                  resizeMode:'cover'
+                }}/>
+          <Text style={{fontSize : 30, color: 'gold', fontWeight: 'bold'}}> INROADS </Text>
+         </View>
+      )
+    }
+});
+
+
 
 
 
