@@ -22,11 +22,11 @@ export default class LearningAcademy extends React.Component {
       <TitleText text="Learning Academy">
       </TitleText>
       <View style={{flexDirection:"row"}}>
-        <Checky></Checky>
+      <Checky></Checky>
             <SButton
             title="Application"
             color="#f194ff"
-            onPress={() => {this.props.navigation.navigate('Application')}}
+            onPress={() => {this.props.navigation.navigate('Application1')}}
             />
       </View>
       <Separator />

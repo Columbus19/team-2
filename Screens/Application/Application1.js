@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton} from '../../Themes/Themes.js';
 import { StyleSheet, TouchableHighlight, Text, View, Image, TextInput, ScrollView, Picker } from 'react-native';
 // import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
 import { Button, ThemeProvider } from 'react-native-elements';
@@ -16,7 +17,7 @@ export default class Application1 extends React.Component {
     return (
       <View style={styles.container}>
         <View>
-          <Text>Application Form </Text>
+          <TitleText text="Application Form">Application Form </TitleText>
         </View>
         <ScrollView contentContainerStyle={styles.scroll}>
           <TextInput
