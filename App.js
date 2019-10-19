@@ -12,11 +12,11 @@ import LearningAcademy from './Screens/LearningAcademy.js'
 import ResumeTemplates from './Screens/ResumeTemplates.js'
 
 
-class Loader extends React.Component{  
+class Loader extends React.Component{
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        
+
       </View>
     );
   }
@@ -26,7 +26,7 @@ const AppNavigator = createStackNavigator({
   SignInit: {
       screen: SignInit
   },
-  SignType: { 
+  SignType: {
       screen: SignType
   },
   MockInterviews: {
