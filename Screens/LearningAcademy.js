@@ -15,9 +15,9 @@ function Separator() {
 
 export default function App() {
   return (
-    
+
     <SafeAreaView style={styles.container}>
-      <Text> 
+      <Text>
       Learning Academy
       </Text>
       <View>
@@ -52,7 +52,7 @@ export default function App() {
             onPress={() => Alert.alert('Left button pressed')}
           />
         </View>
-        
+
     </SafeAreaView>
   );
 }

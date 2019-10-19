@@ -14,8 +14,9 @@ export default class MockInterviews extends React.Component {
         <Image
           source={{ uri: 'assets/skype.png'}}
           style={{width:50, height:50}}
-          // onPress = {() => Linking.openUrl('skype:').catch((err) => {console.error('An error occured', err))}};
+          onPress={ ()=> { Linking.openUrl('skype:')}}
         />
+        <Button title="Open Skype" onPress={ ()=> { Linking.openUrl('skype:')}}/>
       </View>
     );
   }

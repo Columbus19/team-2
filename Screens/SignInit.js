@@ -8,7 +8,7 @@ export default class SignInit extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-         <Button title="Create Acc" onPress = { () => {this.props.navigation.navigate('SignType')}}/>
+         <Button title="Create Acc" onPress = { () => {this.props.navigation.navigate('MockInterviews')}}/>
       </View>
     );
   }
