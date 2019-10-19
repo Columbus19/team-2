@@ -4,8 +4,9 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import SignInit from './Screens/SignInit.js';
 import SignType from './Screens/SignType.js';
+import * as Font from 'expo-font';
 
-class Loader extends React.Component {
+class Loader extends React.Component{  
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
