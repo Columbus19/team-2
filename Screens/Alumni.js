@@ -25,9 +25,9 @@ export default class Alumni extends React.Component {
       <Separator />
       <View>
         <SButton
-          title="Training Session"
+          title="Let students know you are ready to review resumes."
           color="#f194ff"
-          onPress={() => {this.props.navigation.navigate('TrainingVideo')}}
+          onPress={() => {this.props.navigation.navigate('ResumeConfirmation')}}
         />
       </View>
       <Separator />
@@ -38,8 +38,7 @@ export default class Alumni extends React.Component {
           onPress={() => {this.props.navigation.navigate('MockInterviewsAlumni')}}
         />
       </View>
-      <Separator />
-        
+      <Separator />       
     </SafeAreaView>
   );
   }
