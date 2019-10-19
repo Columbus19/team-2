@@ -1,5 +1,5 @@
 import React from 'react';
-import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton, CButton} from '../Themes/Themes.js';
+import { TitleText, BodyText, PTitle, RootContainer, Checky, SButton, CButton } from '../Themes/Themes.js';
 import { StackActions, NavigationActions } from 'react-navigation';
 import {
   StyleSheet,
@@ -10,45 +10,46 @@ import {
   Alert,
 } from 'react-native';
 import Constants from 'expo-constants';
-
+isChecked = [false, false, false, false]
 function Separator() {
   return <View style={styles.separator} />;
 }
 
 export default class LearningAcademy extends React.Component {
-    componentDidMount() {
-      
-    }
+  constructor(props) {
+    super(props);
+    this.props.navigation.setParams({ 'onecheck': false, 'twocheck': false, 'threecheck': false, 'fourcheck': false });
+  }
 
-    render(){
+  render() {
     return (
 
-    <RootContainer>
-      <TitleText text = "CheckList" style={{flex: .1}} />
-      
-        <View style={{flexDirection:"row"}}>
-              <Checky></Checky>
-                <CButton text="Application" onPress={() => {this.props.navigation.navigate('Application1')}}></CButton>
-        </View> 
+      <RootContainer>
+        <TitleText text="CheckList" style={{ flex: .1 }} />
 
-        <View style={{flexDirection:"row"}}>
-              <Checky></Checky>
-                <CButton text="Training Session" onPress={() => {this.props.navigation.navigate('TrainingVideo')}}></CButton>
-        </View> 
+        <View style={{ flexDirection: "row" }}>
+          <Checky checked={this.props.navigation.getParam('onecheck')}></Checky>
+          <CButton text="Application" onPress={() => { this.props.navigation.navigate('Application1'); this.props.navigation.setParams({ 'onecheck': true }) }}></CButton>
+        </View>
 
-        <View style={{flexDirection:"row"}}>
-              <Checky></Checky>
-                <CButton text="Mock Interviews" onPress={() => {this.props.navigation.navigate('MockInterviews')}}></CButton>
-        </View> 
-        
-        <View style={{flexDirection:"row"}}>
-              <Checky></Checky>
-                <CButton text="Resume Template and Review" onPress={() => {this.props.navigation.navigate('ResumeTemplates')}}></CButton>
-        </View> 
+        <View style={{ flexDirection: "row" }}>
+          <Checky checked={this.props.navigation.getParam('twocheck')}></Checky>
+          <CButton text="Training Session" onPress={() => { this.props.navigation.navigate('TrainingVideo'); this.props.navigation.setParams({ 'twocheck': true }) }}></CButton>
+        </View>
 
-    </RootContainer>
- );
-    }
+        <View style={{ flexDirection: "row" }}>
+          <Checky checked={this.props.navigation.getParam('threecheck')}></Checky>
+          <CButton text="Mock Interviews" onPress={() => { this.props.navigation.navigate('MockInterviews'); this.props.navigation.setParams({ 'threecheck': true }) }}></CButton>
+        </View>
+
+        <View style={{ flexDirection: "row" }}>
+          <Checky checked={this.props.navigation.getParam('fourcheck')}></Checky>
+          <CButton text="Resume Template and Review" onPress={() => { this.props.navigation.navigate('ResumeTemplates'); this.props.navigation.setParams({ 'fourcheck': true }) }}></CButton>
+        </View>
+
+      </RootContainer>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
