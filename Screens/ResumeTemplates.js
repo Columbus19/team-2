@@ -5,6 +5,7 @@ import {
     Text,
     View,
     Platform,
+    Linking,
     Image,
     TextInput,
     Alert,
@@ -17,6 +18,8 @@ import {
   } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
 import { Button, ThemeProvider } from 'react-native-elements';
+import {TitleText, RootContainer, BodyText, PTitle, Checky, SButton} from '../Themes/Themes.js';
+
 
 export default class SignInit extends React.Component {
     
@@ -26,9 +29,8 @@ export default class SignInit extends React.Component {
           <View>
             <Text>Resume Templates</Text>        
           </View>
-          <Button title="View Resume Template"
-                style={resume_style.buttons}
-                onPress={() => {this.handlePress()}}
+          <SButton title="View Resume Templates"
+                onPress={() => { Linking.openURL('https://templates.office.com/en-us/resumes-and-cover-letters')}}
                 />
       </View>
     );
