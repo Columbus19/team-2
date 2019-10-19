@@ -10,6 +10,8 @@
 		638A67256B3FE44986CE8475 /* Pods_INROADS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59B4F3C60E51AD171969628 /* Pods_INROADS.framework */; };
 		E12CC95C235AA50D005A2FB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E12CC95B235AA50D005A2FB5 /* GoogleService-Info.plist */; };
 		E12CC95E235AA99D005A2FB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12CC95D235AA99D005A2FB5 /* User.swift */; };
+		E12CC960235AAAB2005A2FB5 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12CC95F235AAAB2005A2FB5 /* UserManager.swift */; };
+		E12CC962235AAB4E005A2FB5 /* UserNetworkAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12CC961235AAB4D005A2FB5 /* UserNetworkAdaptor.swift */; };
 		E14B419F232826BD00EBDB4A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B419E232826BD00EBDB4A /* Button.swift */; };
 		E1F922E0227CA9030051E519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F922DF227CA9030051E519 /* AppDelegate.swift */; };
 		E1F922E2227CA9030051E519 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F922E1227CA9030051E519 /* LoginViewController.swift */; };
@@ -28,6 +30,8 @@
 		B59B4F3C60E51AD171969628 /* Pods_INROADS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INROADS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CC95B235AA50D005A2FB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E12CC95D235AA99D005A2FB5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E12CC95F235AAAB2005A2FB5 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		E12CC961235AAB4D005A2FB5 /* UserNetworkAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkAdaptor.swift; sourceTree = "<group>"; };
 		E14B419E232826BD00EBDB4A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		E1F922DC227CA9030051E519 /* INROADS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INROADS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F922DF227CA9030051E519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				E12CC95D235AA99D005A2FB5 /* User.swift */,
+				E12CC95F235AAAB2005A2FB5 /* UserManager.swift */,
+				E12CC961235AAB4D005A2FB5 /* UserNetworkAdaptor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12CC960235AAAB2005A2FB5 /* UserManager.swift in Sources */,
+				E12CC962235AAB4E005A2FB5 /* UserNetworkAdaptor.swift in Sources */,
 				E14B419F232826BD00EBDB4A /* Button.swift in Sources */,
 				E1F922F8227CC0270051E519 /* CustomTextField.swift in Sources */,
 				E1F922E2227CA9030051E519 /* LoginViewController.swift in Sources */,
