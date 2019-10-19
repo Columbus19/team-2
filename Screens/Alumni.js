@@ -1,5 +1,6 @@
 import React from 'react';
 import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton} from '../Themes/Themes.js';
+import {TouchableHighlight, Image, Linking, TextInput} from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
 import {
   StyleSheet,
@@ -43,11 +44,41 @@ export default class Alumni extends React.Component {
           onPress={() => {this.props.navigation.navigate('MockInterviewsAlumni')}}
         />
       </View>
-      <Separator />       
+      <Separator />
+              <TouchableHighlight style={signin_style.hightlight} onPress={ ()=> { Linking.openURL('https://inroads.org/support-inroads')}}>
+            <Image
+              style={signin_style.image}
+              source={require('../assets/donatebutton.png')}
+            />
+          </TouchableHighlight>       
     </SafeAreaView>
   );
   }
 }
+
+const signin_style = StyleSheet.create({
+  image: {
+    marginTop: 25,
+    width: 300,
+    height: 139,
+    resizeMode: 'stretch'
+  },
+  hightlight: {
+    // width: 200, 
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  input: {
+    marginTop: 10,
+    height: 40,
+    width: 300
+  },
+  buttons: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',    
+  }
+});
 
 const styles = StyleSheet.create({
   container: {
