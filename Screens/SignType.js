@@ -11,10 +11,14 @@ export default class SignType extends React.Component {
           <Text style={select_styles.header_text}>Who are you?</Text>
         </View>
         <View style={select_styles.view}>
-          <Button title="Student" style={select_styles.buttons}></Button>
+          <Button title="Student" style={select_styles.buttons}
+          onPress={() => {this.props.navigation.navigate('LearningAcademy')}}
+          />
         </View>
         <View style={select_styles.view}>
-          <Button title="Alumni" style={select_styles.buttons}></Button>
+          <Button title="Alumni" style={select_styles.buttons}
+            onPress={() => {this.props.navigation.navigate('Alumni')}}
+          />
         </View>
         <View style={select_styles.view}>
           <Button title="Client" style={select_styles.buttons}></Button>
