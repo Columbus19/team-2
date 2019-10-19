@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  background-color: red;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  border-radius: 5px;
+  padding: 0 5 5 0;
+  margin: 5px 5px 5px 5px;
+  width: 200px;
+  height: 30px;
+}
+select {
+  width: 200px;
+  height: 30px;
+  margin: 5px 5px 5px 5px;
+  text-align: center;
+}
