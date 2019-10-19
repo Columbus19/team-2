@@ -5,7 +5,9 @@ import { createStackNavigator } from 'react-navigation-stack';
 import SignInit from './Screens/SignInit.js';
 import SignType from './Screens/SignType.js';
 import MockInterviews from './Screens/MockInterviews.js';
-import TrainingSession from './Screens/TrainingVideos.js';
+import TrainingVideos from './Screens/TrainingVideos.js';
+import MockInterviewsAlumni from './Screens/MockInterviewsAlumni.js'
+import ResumeTemplate from './Screens/ResumeTemplate.js'
 
 class Loader extends React.Component {
   render() {
@@ -30,11 +32,17 @@ const AppNavigator = createStackNavigator({
   MockInterviewsAlumni: {
     screen: MockInterviewsAlumni
   },
-  ApplicationTemplate: {
-    screen: ApplicationTemplate
+  Application: {
+    screen: Application
   },
   MockInterviewsAlumni: {
     screen: MockInterviewsAlumni
+  },
+  TrainingVideos: {
+    screen: TrainingVideos
+  },
+  ResumeTemplate: {
+    screen: ResumeTemplate
   },
 }, {initialRouteName: "SignInit"});
 

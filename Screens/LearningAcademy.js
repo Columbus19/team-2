@@ -32,7 +32,7 @@ export default function App() {
         <Button
           title="Training Session"
           color="#f194ff"
-          onPress={() => {this.props.navigation.navigate('Trainingsession')}}
+          onPress={() => {this.props.navigation.navigate('TrainingSession')}}
         />
       </View>
       <Separator />
@@ -40,7 +40,7 @@ export default function App() {
         <Button
           title="Mock Interviews"
           color="#f194ff"
-          onPress={() =>{this.props.navigation.navigate('Trainingsession')}}
+          onPress={() =>{this.props.navigation.navigate('MockInterviews')}}
         />
       </View>
       <Separator />
@@ -49,8 +49,8 @@ export default function App() {
           <Button
             title="Resume Template and Review"
             color="#f194ff"
-            onPress={() => Alert.alert('Left button pressed')}
-          />
+            onPress={() => {this.props.navigation.navigate('ResumeTemplates')}}
+            />
         </View>
         
     </SafeAreaView>
