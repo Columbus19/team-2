@@ -2,30 +2,27 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import Sign from './Sign.js';
-import SignType from './SignType.js';
+import SignInit from './Screens/SignInit.js';
+import SignType from './Screens/SignType.js';
 
-class HomeScreen extends React.Component {
+class Loader extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
+        
       </View>
     );
   }
 }
 
 const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-  },
-  SignP: {
-      screen: Sign
+  SignInit: {
+      screen: SignInit
   },
   SignType: { 
       screen: SignType
   }
-}, {initialRouteName: "SignP"});
+}, {initialRouteName: "SignInit"});
 
 
 
