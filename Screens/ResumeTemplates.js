@@ -22,7 +22,29 @@ import {TitleText, RootContainer, BodyText, PTitle, Checky, SButton} from '../Th
 
 
 export default class SignInit extends React.Component {
-    
+  constructor(props) {
+    super(props);
+    this.state = {isLoading : true}
+  }
+
+  componentDidMount(){
+    return fetch('http://localhost:8080/cfg/users.sql')
+      .then((response) => response.json())
+      .then((responseJson) => {
+
+        this.setState({
+          isLoading: false,
+          dataSource: responseJson.movies,
+        }, function(){
+
+        });
+
+      })
+      .catch((error) =>{
+        console.error(error);
+      });
+  }
+
   render() {
     return (
       <View style= {{justifyContent: 'center', alignContent: 'center'}}>
@@ -71,7 +93,7 @@ const resume_style = StyleSheet.create({
     resizeMode: 'stretch'
   },
   hightlight: {
-    // width: 200, 
+    // width: 200,
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -82,7 +104,7 @@ const resume_style = StyleSheet.create({
   buttons: {
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',    
+    alignItems: 'center',
   }
 });
 const styles = StyleSheet.create({

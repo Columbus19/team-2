@@ -7,15 +7,14 @@ import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton} from '../The
 export default class MockInterviews extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        
+      <RootContainer>
         <TitleText text="Mock Interviews for Students"></TitleText>
         <Image
           source={require('../assets/skype.png')}
           style={{width:50, height:50}}
         />
         <SButton title="Open Skype" onPress={ ()=> { Linking.openURL('https://www.skype.com')}}/>
-      </View>
+      </RootContainer>
     );
   }
 }
