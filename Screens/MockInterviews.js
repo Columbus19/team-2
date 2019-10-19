@@ -7,14 +7,14 @@ import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton} from '../The
 export default class MockInterviews extends React.Component {
   render() {
     return (
-      <RootContainer>
+      <View style={styles.container}>
         <TitleText text="Mock Interviews for Students"></TitleText>
         <Image
           source={require('../assets/skype.png')}
           style={{width:50, height:50}}
         />
         <SButton title="Open Skype" onPress={ ()=> { Linking.openURL('https://www.skype.com')}}/>
-      </RootContainer>
+      </View>
     );
   }
 }
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
   },
   header: {
     fontSize: 30,

@@ -11,7 +11,9 @@ import Alumni from './Screens/Alumni.js'
 import LearningAcademy from './Screens/LearningAcademy.js'
 import ResumeTemplates from './Screens/ResumeTemplates.js'
 import Application from './Screens/Application/Application1.js'
+import BasicFlatList from './Screens/BasicFlatList.js'
 import Application1 from './Screens/Application/Application1.js';
+
 
 class Loader extends React.Component{  
   render() {
@@ -34,7 +36,6 @@ const AppNavigator = createStackNavigator({
   },
   MockInterviews: {
       screen: MockInterviews,
-      
   },
   // Application: {
   //   screen: Application
@@ -59,6 +60,9 @@ const AppNavigator = createStackNavigator({
   Application1: {
     screen: Application1
   },
+  Client: {
+      screen: BasicFlatList 
+  }
 }, {initialRouteName: "SignInit"});
 
 

@@ -27,24 +27,6 @@ export default class SignInit extends React.Component {
     this.state = {isLoading : true}
   }
 
-  componentDidMount(){
-    return fetch('http://localhost:8080/cfg/users.sql')
-      .then((response) => response.json())
-      .then((responseJson) => {
-
-        this.setState({
-          isLoading: false,
-          dataSource: responseJson.movies,
-        }, function(){
-
-        });
-
-      })
-      .catch((error) =>{
-        console.error(error);
-      });
-  }
-
   render() {
     return (
       <View style= {{justifyContent: 'center', alignContent: 'center'}}>

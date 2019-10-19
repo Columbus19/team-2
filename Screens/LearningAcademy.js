@@ -25,7 +25,7 @@ export default class LearningAcademy extends React.Component {
 
     <RootContainer>
       <TitleText text = "CheckList" style={{flex: .1}} />
-     
+      
         <View style={{flexDirection:"row"}}>
               <Checky></Checky>
                 <CButton text="Application" onPress={() => {this.props.navigation.navigate('Application1')}}></CButton>

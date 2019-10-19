@@ -10,8 +10,8 @@ export default class SignType extends React.Component {
   render() {
     return (
       <RootContainer>
-            <TitleText text="Who are you?"></TitleText>
-   
+          <TitleText text="Who are you?"></TitleText>
+
           <SButton title="Student"
           onPress={() => {
             this.props.navigation.navigate('LearningAcademy')
@@ -27,7 +27,7 @@ export default class SignType extends React.Component {
             onPress={() => {this.props.navigation.navigate('Alumni')}}
           />
 
-          <SButton title="Client"/>
+          <SButton title="Client" onPress={() => {this.props.navigation.navigate('Client')}}/>
 
       </RootContainer>
     );
