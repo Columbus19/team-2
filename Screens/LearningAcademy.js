@@ -25,11 +25,11 @@ export default class LearningAcademy extends React.Component {
 
     <RootContainer>
       <View style={{flexDirection:"row"}}>
-           
+      <Checky></Checky>
             <SButton
             title="Application"
             color="#f194ff"
-            onPress={() => {this.props.navigation.navigate('Application')}}
+            onPress={() => {this.props.navigation.navigate('Application1')}}
             />
       </View>
   

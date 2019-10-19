@@ -11,13 +11,16 @@ const styles = StyleSheet.create({
       color: colors['primary'],
       fontWeight: 'bold',
       fontSize: 60,
+      marginTop: -40
     },
 
     container: {
+        flexWrap : "wrap",
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'flex-start',
         justifyContent: 'space-around',
+      
       },
 
     h2 : {

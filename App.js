@@ -9,6 +9,9 @@ import TrainingVideo from './Screens/TrainingVideo.js';
 import MockInterviewsAlumni from './Screens/MockInterviewsAlumni.js'
 import Alumni from './Screens/Alumni.js'
 import LearningAcademy from './Screens/LearningAcademy.js'
+import ResumeTemplates from './Screens/ResumeTemplates.js'
+import Application from './Screens/Application/Application1.js'
+import Application1 from './Screens/Application/Application1.js';
 
 class Loader extends React.Component{  
   render() {
@@ -30,13 +33,15 @@ const AppNavigator = createStackNavigator({
       navigationOptions: {header: null}
   },
   MockInterviews: {
-      screen: MockInterviews
+      screen: MockInterviews,
+      
   },
   // Application: {
   //   screen: Application
   // },
   MockInterviewsAlumni: {
-    screen: MockInterviewsAlumni
+    screen: MockInterviewsAlumni,
+    navigationOptions : {header: null}
   },
   TrainingVideo: {
     screen: TrainingVideo
@@ -48,10 +53,13 @@ const AppNavigator = createStackNavigator({
     screen: LearningAcademy,
     navigationOptions : {header: null}
   },
-  // ResumeTemplate: {
-  //   screen: ResumeTemplate
-  // },
-}, {initialRouteName: "SignInit", });
+  ResumeTemplates: {
+    screen: ResumeTemplates
+  },
+  Application1: {
+    screen: Application1
+  },
+}, {initialRouteName: "SignInit"});
 
 
 

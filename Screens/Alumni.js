@@ -40,7 +40,7 @@ export default class Alumni extends React.Component {
         <SButton
           title="Mock Interviews"
           color="#f194ff"
-          onPress={() => {this.props.navigation.navigate('MockInterviews')}}
+          onPress={() => {this.props.navigation.navigate('MockInterviewsAlumni')}}
         />
       </View>
       <Separator />
