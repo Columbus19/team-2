@@ -14,6 +14,10 @@ import Application from './Screens/Application/Application1.js'
 import BasicFlatList from './Screens/BasicFlatList.js'
 import Application1 from './Screens/Application/Application1.js';
 import colors from './Themes/Colors.js'
+import ResumeConfirmation from './Screens/ResumeConfirmation.js';
+import ResumeReview from './Screens/ResumeReview.js';
+
+
 
 class Loader extends React.Component{  
   render() {
@@ -59,6 +63,12 @@ const AppNavigator = createStackNavigator({
   },
   Application1: {
     screen: Application1
+  },
+  ResumeConfirmation: {
+    screen: ResumeConfirmation
+  },
+  ResumeReview: {
+    screen: ResumeReview
   },
   Client: {
       screen: BasicFlatList 

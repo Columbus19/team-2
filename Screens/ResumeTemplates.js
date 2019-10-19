@@ -35,38 +35,12 @@ export default class SignInit extends React.Component {
           <SButton title="View Resume Templates"
                 onPress={() => { Linking.openURL('https://templates.office.com/en-us/resumes-and-cover-letters')}}
                 />
+          <SButton title="View Alumni Available for Resume Reviews"
+                onPress={() => {this.props.navigation.navigate('ResumeReview')}}
+                />
       </View>
     );
   }
-    handlePress = () => {
-        if(Platform.OS === 'ios'){
-           //IOS
-           OpenFile.openDoc([{
-             url:"https://omextemplates.content.office.net/support/templates/en-us/tf00002102.docx",
-             fileNameOptional:"./../assets/resume.docx"
-           }], (error, url) => {
-              if (error) {
-                console.error(error);
-              } else {
-                console.log(url)
-              }
-            })
-         }else{
-           //Android
-           OpenFile.openDoc([{
-             url:"https://omextemplates.content.office.net/support/templates/en-us/tf00002102.docx", // Local "file://" + filepath
-             fileName:"./../assets/resume.docx",
-             cache:false,
-             fileType:"docx"
-           }], (error, url) => {
-              if (error) {
-                console.error(error);
-              } else {
-                console.log(url)
-              }
-            })
-         }
-       }
 }
 const resume_style = StyleSheet.create({
   image: {
