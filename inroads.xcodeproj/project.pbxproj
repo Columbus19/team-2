@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		638A67256B3FE44986CE8475 /* Pods_INROADS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59B4F3C60E51AD171969628 /* Pods_INROADS.framework */; };
 		E12CC95C235AA50D005A2FB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E12CC95B235AA50D005A2FB5 /* GoogleService-Info.plist */; };
 		E14B419F232826BD00EBDB4A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B419E232826BD00EBDB4A /* Button.swift */; };
 		E1F922E0227CA9030051E519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F922DF227CA9030051E519 /* AppDelegate.swift */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3239F73312A0900D097D7218 /* Pods-INROADS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INROADS.debug.xcconfig"; path = "Target Support Files/Pods-INROADS/Pods-INROADS.debug.xcconfig"; sourceTree = "<group>"; };
+		8E2CB2345180C011D35B09EB /* Pods-INROADS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INROADS.release.xcconfig"; path = "Target Support Files/Pods-INROADS/Pods-INROADS.release.xcconfig"; sourceTree = "<group>"; };
+		B59B4F3C60E51AD171969628 /* Pods_INROADS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INROADS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CC95B235AA50D005A2FB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E14B419E232826BD00EBDB4A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		E1F922DC227CA9030051E519 /* INROADS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INROADS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638A67256B3FE44986CE8475 /* Pods_INROADS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D9DBE37E29E329B1B934365 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3239F73312A0900D097D7218 /* Pods-INROADS.debug.xcconfig */,
+				8E2CB2345180C011D35B09EB /* Pods-INROADS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		331B03158E3DCFA72E0FAA09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B59B4F3C60E51AD171969628 /* Pods_INROADS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1F922D3227CA9030051E519 = {
 			isa = PBXGroup;
 			children = (
 				E1F922DE227CA9030051E519 /* INROADS */,
 				E1F922DD227CA9030051E519 /* Products */,
+				2D9DBE37E29E329B1B934365 /* Pods */,
+				331B03158E3DCFA72E0FAA09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1F922EE227CA9040051E519 /* Build configuration list for PBXNativeTarget "INROADS" */;
 			buildPhases = (
+				BF13EE17FEB28EFCDCD93993 /* [CP] Check Pods Manifest.lock */,
 				E1F922D8227CA9030051E519 /* Sources */,
 				E1F922D9227CA9030051E519 /* Frameworks */,
 				E1F922DA227CA9030051E519 /* Resources */,
+				4B27665F35CAA6EBF8CE0CE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +207,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B27665F35CAA6EBF8CE0CE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-INROADS/Pods-INROADS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-INROADS/Pods-INROADS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-INROADS/Pods-INROADS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF13EE17FEB28EFCDCD93993 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-INROADS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E1F922D8227CA9030051E519 /* Sources */ = {
@@ -336,6 +405,7 @@
 		};
 		E1F922EF227CA9040051E519 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3239F73312A0900D097D7218 /* Pods-INROADS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,6 +424,7 @@
 		};
 		E1F922F0227CA9040051E519 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E2CB2345180C011D35B09EB /* Pods-INROADS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
