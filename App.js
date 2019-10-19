@@ -4,6 +4,12 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import SignInit from './Screens/SignInit.js';
 import SignType from './Screens/SignType.js';
+import MockInterviews from './Screens/MockInterviews.js';
+import TrainingVideo from './Screens/TrainingVideo.js';
+import MockInterviewsAlumni from './Screens/MockInterviewsAlumni.js'
+import Alumni from './Screens/Alumni.js'
+import LearningAcademy from './Screens/LearningAcademy.js'
+// import ResumeTemplate from './Screens/ResumeTemplate.js'
 
 
 class Loader extends React.Component{  
@@ -22,7 +28,28 @@ const AppNavigator = createStackNavigator({
   },
   SignType: { 
       screen: SignType
-  }
+  },
+  MockInterviews: {
+      screen: MockInterviews
+  },
+  // Application: {
+  //   screen: Application
+  // },
+  MockInterviewsAlumni: {
+    screen: MockInterviewsAlumni
+  },
+  TrainingVideo: {
+    screen: TrainingVideo
+  },
+  Alumni: {
+    screen: Alumni
+  },
+  LearningAcademy: {
+    screen: LearningAcademy
+  },
+  // ResumeTemplate: {
+  //   screen: ResumeTemplate
+  // },
 }, {initialRouteName: "SignInit"});
 
 
