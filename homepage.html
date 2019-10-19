@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <link rel="stylesheet" href="styling.css">
+    <title>INROADS Homepage</title>
+    
+  </head>
+  <body>
+        <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                  <a href="#">Application</a>
+                  <a href="#">2 Hour Training</a>
+                  <a href="#">Mock Interviews</a>
+                  <a href="#">Resume Template</a>
+                </div>
+            </div>  
+        </div>  
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Learning Academy</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+    
+  </body>
+</html>
