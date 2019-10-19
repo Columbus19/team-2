@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Linking} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
-import { Button, ThemeProvider, Header, Image } from 'react-native-elements';
+import { Button, ThemeProvider, Header, Image, Linking } from 'react-native-elements';
 
 
 export default class MockInterviews extends React.Component {
@@ -16,7 +16,7 @@ export default class MockInterviews extends React.Component {
           style={{width:50, height:50}}
           onPress={ ()=> { Linking.openUrl('skype:')}}
         />
-        <Button title="Open Skype" onPress={ ()=> { Linking.openURL('https://www.skype.com')}}/>
+        <Button title="Open Skype" onPress={ ()=> { Linking.openUrl('skype:')}}/>
       </View>
     );
   }
