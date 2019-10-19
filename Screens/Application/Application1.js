@@ -17,7 +17,7 @@ export default class Application1 extends React.Component {
     return (
       <View style={styles.container}>
         <View>
-          <TitleText text="Application Form">Application Form </TitleText>
+          <PTitle text="Application Form">Application Form </PTitle>
         </View>
         <ScrollView contentContainerStyle={styles.scroll}>
           <TextInput

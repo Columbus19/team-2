@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppRegistry, FlatList, StyleSheet, Text, View, Image } from 'react-native';
 import flatListData from '../assets/flatListData.js';
+import colors from '../Themes/Colors.js'
 
 class FlatListItem extends React.Component {
     render() {          
@@ -12,7 +13,7 @@ class FlatListItem extends React.Component {
                 <View style={{
                         flex: 1,
                         flexDirection:'row',
-                        backgroundColor: this.props.index % 2 == 0 ? 'darkgreen': 'gold'                
+                        backgroundColor: this.props.index % 2 == 0 ? colors['primary']: 'grey'                
                         //backgroundColor: 'navy'
                 }}>            
                     <Image 
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
 export default class BasicFlatList extends React.Component {
     render() {
       return (
-        <View style={{flex: 1, marginTop: 22}}>
+        <View style={{flex: 1}}>
             <FlatList 
                 data={flatListData}
                 renderItem={({item, index})=>{

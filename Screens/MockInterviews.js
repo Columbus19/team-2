@@ -9,11 +9,11 @@ export default class MockInterviews extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TitleText text="Mock Interviews for Students"></TitleText>
-        <Image
-          source={require('../assets/skype.png')}
-          style={{width:50, height:50, marginBottom: 30, marginTop: 20}}
-        />
+        <PTitle text="Mock Interviews for Students"></PTitle>
+          <Image
+            source={require('../assets/skype.png')}
+            style={{width:50, height:50, marginBottom: 30, marginTop: 20}}
+          />
         <SButton title="Open Skype" onPress={ ()=> { Linking.openURL('https://www.skype.com')}}/>
       </View>
     );

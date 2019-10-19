@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
       color: colors['text'],
       fontWeight: 'bold',
       fontSize: 60,
+      textShadowColor: 'rgba(0, 0, 0, 0.75)',
+  textShadowOffset: {width: -1, height: 1},
+  textShadowRadius: 10
     },
 
     container: {
@@ -16,17 +19,26 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'flex-start',
         justifyContent: 'space-around',
+        
       },
 
     h2 : {
       color: colors['text'],
       fontWeight: 'bold',
       fontSize: 35,
+      fontSize: 60,
+      textShadowColor: 'rgba(0, 0, 0, 0.75)',
+  textShadowOffset: {width: -1, height: 1},
+  textShadowRadius: 10
     },
 
     btext: {
       color: colors['text'],
       fontSize: 20,
+      fontSize: 60,
+      textShadowColor: 'rgba(0, 0, 0, 0.75)',
+  textShadowOffset: {width: -1, height: 1},
+  textShadowRadius: 10
     }
 });
 
@@ -117,14 +129,14 @@ class SButton extends React.PureComponent {
 
     render() {
         return(
-            <View style ={{flexDirection : 'row'}}>
+            <View style ={{flexDirection : 'row', marginTop: 15}}>
                 <Button color={colors['tertiary']}
                     title={this.props.title} 
                     titleStyle={{color : colors['primary']}}
                     buttonStyle={{backgroundColor : colors['tertiary']}}
                     type = "outline"
                     onPress = {this.props.onPress}
-                    containerStyle={{flex : 1
+                    containerStyle={{flex : .99
                                     }}
                     >
                 </Button>

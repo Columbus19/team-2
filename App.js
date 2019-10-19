@@ -27,6 +27,8 @@ class Loader extends React.Component{
   }
 }
 
+console.disableYellowBox = true
+
 const AppNavigator = createStackNavigator({
   SignInit: {
       screen: SignInit,

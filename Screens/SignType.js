@@ -9,9 +9,10 @@ import colors from '../Themes/Colors.js'
 export default class SignType extends React.Component {
   render() {
     return (
-      <RootContainer>
-          <TitleText text="Who are you?"></TitleText>
-
+      <View style={{flex: 1, justifyContent: 'space-evenly', backgroundColor: colors['bgcolor']}}>
+         <View style={{justifyContent: 'center', alignContent: 'center'}} >
+           <Text style={{color: colors['text'], fontSize: 34, textAlign :"center"}}> Select Account Type: </Text>
+          </View>
           <SButton title="Student"
           onPress={() => {
             this.props.navigation.navigate('LearningAcademy')
@@ -39,7 +40,7 @@ export default class SignType extends React.Component {
               });
               this.props.navigation.dispatch(resetAction); */}}/>
 
-      </RootContainer>
+      </View>
     );
   }
 }
