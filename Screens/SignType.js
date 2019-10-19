@@ -8,7 +8,7 @@ export default class SignType extends React.Component {
     return (
       <View style={styles.container}>
         <View style={select_styles.header}>
-          <Text style={select_styles.header_text}>Who are you?</Text>        
+          <Text style={select_styles.header_text}>Who are you?</Text>
         </View>
         <View style={select_styles.view}>
           <Button title="Student" style={select_styles.buttons}></Button>
