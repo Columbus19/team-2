@@ -9,14 +9,12 @@ import TrainingVideo from './Screens/TrainingVideo.js';
 import MockInterviewsAlumni from './Screens/MockInterviewsAlumni.js'
 import Alumni from './Screens/Alumni.js'
 import LearningAcademy from './Screens/LearningAcademy.js'
-import ResumeTemplates from './Screens/ResumeTemplates.js'
 
-
-class Loader extends React.Component{
+class Loader extends React.Component{  
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-
+        
       </View>
     );
   }
@@ -24,10 +22,12 @@ class Loader extends React.Component{
 
 const AppNavigator = createStackNavigator({
   SignInit: {
-      screen: SignInit
+      screen: SignInit,
+      navigationOptions : {header: null}
   },
-  SignType: {
-      screen: SignType
+  SignType: { 
+      screen: SignType,
+      navigationOptions: {header: null}
   },
   MockInterviews: {
       screen: MockInterviews
@@ -45,12 +45,13 @@ const AppNavigator = createStackNavigator({
     screen: Alumni
   },
   LearningAcademy: {
-    screen: LearningAcademy
+    screen: LearningAcademy,
+    navigationOptions : {header: null}
   },
-  ResumeTemplates: {
-    screen: ResumeTemplates
-  },
-}, {initialRouteName: "SignInit"});
+  // ResumeTemplate: {
+  //   screen: ResumeTemplate
+  // },
+}, {initialRouteName: "SignInit", });
 
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton} from '../Themes/Themes.js';
+import { StackActions, NavigationActions } from 'react-navigation';
 import {
   StyleSheet,
   Button,
@@ -15,6 +16,10 @@ function Separator() {
 }
 
 export default class Alumni extends React.Component {
+  componentDidMount() {
+ 
+  }
+
   render() {
   return (
     

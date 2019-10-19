@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { StyleSheet, TouchableHighlight, Text, View, Image, TextInput} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
@@ -10,12 +9,11 @@ export default class SignInit extends React.Component {
     super(props);
     this.state = {username: '', password: ''};
   }
+
   render() {
     return (
       <View style={styles.container}>
-          <View>
             <TitleText text="Sign In" />      
-          </View>
           <TextInput
               style={signin_style.input}
               placeholder="Username"
@@ -41,6 +39,7 @@ export default class SignInit extends React.Component {
 }
 const signin_style = StyleSheet.create({
   image: {
+    marginTop: 25,
     width: 300,
     height: 60,
     resizeMode: 'stretch'
@@ -51,6 +50,7 @@ const signin_style = StyleSheet.create({
     justifyContent: 'center'
   },
   input: {
+    marginTop: 10,
     height: 40,
     width: 300
   },
@@ -62,6 +62,7 @@ const signin_style = StyleSheet.create({
 });
 const styles = StyleSheet.create({
   container: {
+    marginTop: -50,
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',

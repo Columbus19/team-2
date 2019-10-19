@@ -3,29 +3,33 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
 import { Button, ThemeProvider } from 'react-native-elements';
 import {TitleText, RootContainer, BodyText, PTitle, Checky, SButton} from '../Themes/Themes.js';
+import { StackActions, NavigationActions } from 'react-navigation';
 
 
 export default class SignType extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={select_styles.header}>
+      <RootContainer>
           <TitleText text="Who are you?"></TitleText>
-        </View>
-        <View style={select_styles.view}>
+   
+      
           <SButton title="Student"
-          onPress={() => {this.props.navigation.navigate('LearningAcademy')}}
+          onPress={() => {
+            const resetAction = StackActions.reset({
+              index: 0,
+              actions: [NavigationActions.navigate({ routeName: 'LearningAcademy' })],
+            });
+            this.props.navigation.dispatch(resetAction);
+          }}
           />
-        </View>
-        <View style={select_styles.view}>
+ 
           <SButton title="Alumni"
             onPress={() => {this.props.navigation.navigate('Alumni')}}
           />
-        </View>
-        <View style={select_styles.view}>
+
           <SButton title="Client"/>
-        </View>
-      </View>
+
+      </RootContainer>
     );
   }
 }
@@ -33,6 +37,7 @@ export default class SignType extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 40,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',

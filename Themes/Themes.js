@@ -6,6 +6,8 @@ import { CheckBox } from 'react-native-elements'
 
 const styles = StyleSheet.create({
     main: {
+      textAlign :
+       "center",
       color: colors['primary'],
       fontWeight: 'bold',
       fontSize: 60,
@@ -14,8 +16,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'flex-start',
+        justifyContent: 'space-around',
       },
 
     h2 : {
@@ -77,14 +79,13 @@ class RootContainer extends React.PureComponent {
 class Checky extends React.PureComponent {
     render() {
         return(<CheckBox
-            center
             checkedIcon='dot-circle-o'
             uncheckedIcon='circle-o'
             uncheckedColor='blue'
             checkedColor='gold'
             backgroundColor = 'black'
             checked={this.props.checked}
-            containerStyle = {{color : 'black', borderRadius: 10, borderWidth : 2, borderColor : 'gold'}}
+            containerStyle = {{borderRadius: 10, borderWidth : 2, borderColor : 'gold'}}
             textStyle = {{color : 'blue', fontWeight : 'bold'}}
           />)
     }
@@ -96,16 +97,19 @@ class SButton extends React.PureComponent {
     }
 
     render() {
-        return(<Button color="gold" 
-                title={this.props.title} 
-                titleStyle={{color : colors['primary']}}
-                buttonStyle={{backgroundColor : 'gold'}}
-                type = "outline"
-                onPress = {this.props.onPress}
-                raised = "false"
-                containerStyle={{backgroundColor : 'red',
-                                 borderRadius: 10, borderWidth : 2, borderColor : 'green'}}>
-        </Button>)
+        return(
+            <View style ={{flexDirection : 'row'}}>
+                <Button color="gold" 
+                    title={this.props.title} 
+                    titleStyle={{color : colors['primary']}}
+                    buttonStyle={{backgroundColor : 'gold'}}
+                    type = "outline"
+                    onPress = {this.props.onPress}
+                    containerStyle={{flex : 1
+                                    }}>
+                </Button>
+            </View>
+        )
     }
 }
 

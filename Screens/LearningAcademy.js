@@ -1,5 +1,6 @@
 import React from 'react';
 import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton} from '../Themes/Themes.js';
+import { StackActions, NavigationActions } from 'react-navigation';
 import {
   StyleSheet,
   Button,
@@ -15,21 +16,23 @@ function Separator() {
 }
 
 export default class LearningAcademy extends React.Component {
+    componentDidMount() {
+      
+    }
+
     render(){
     return (
 
-    <SafeAreaView style={styles.container}>
-      <TitleText text="Learning Academy">
-      </TitleText>
+    <RootContainer>
       <View style={{flexDirection:"row"}}>
-        <Checky></Checky>
+           
             <SButton
             title="Application"
             color="#f194ff"
             onPress={() => {this.props.navigation.navigate('Application')}}
             />
       </View>
-      <Separator />
+  
       <View style={{flexDirection:"row"}}>
         <Checky></Checky>
             <SButton
@@ -38,7 +41,7 @@ export default class LearningAcademy extends React.Component {
             onPress={() => {this.props.navigation.navigate('TrainingVideo')}}
             />
       </View>
-      <Separator />
+
       <View style={{flexDirection:"row"}}>
         <Checky></Checky>
             <SButton
@@ -47,7 +50,6 @@ export default class LearningAcademy extends React.Component {
             onPress={() =>{this.props.navigation.navigate('MockInterviews')}}
             />
       </View>
-      <Separator />
 
       <View style={{flexDirection:"row"}}>
         <Checky></Checky>
@@ -58,7 +60,7 @@ export default class LearningAcademy extends React.Component {
             />
         </View>
 
-    </SafeAreaView>
+    </RootContainer>
  );
     }
 }
