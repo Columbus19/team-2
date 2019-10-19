@@ -1,4 +1,5 @@
 import React from 'react';
+import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton} from '../Themes/Themes.js';
 import {
   StyleSheet,
   Button,
@@ -18,13 +19,12 @@ export default class Alumni extends React.Component {
   return (
     
     <SafeAreaView style={styles.container}>
-      <Text> 
-      Alumni Homepage
-      </Text>
+      <TitleText text="Alumni Homepage"> 
+      </TitleText>
 
       <Separator />
       <View>
-        <Button
+        <SButton
           title="Training Session"
           color="#f194ff"
           onPress={() => {this.props.navigation.navigate('TrainingVideo')}}
@@ -32,7 +32,7 @@ export default class Alumni extends React.Component {
       </View>
       <Separator />
       <View>
-        <Button
+        <SButton
           title="Mock Interviews"
           color="#f194ff"
           onPress={() => {this.props.navigation.navigate('MockInterviews')}}

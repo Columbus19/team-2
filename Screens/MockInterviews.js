@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Linking} from 'react-native';
+import { StyleSheet, Text, View, Linking, Image } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
-import { Button, ThemeProvider, Header, Image } from 'react-native-elements';
+import { Button, ThemeProvider, Header } from 'react-native-elements';
 
 
 export default class MockInterviews extends React.Component {
@@ -12,9 +12,8 @@ export default class MockInterviews extends React.Component {
           centerComponent={{ text: 'Mock Interviews', style: {color: '#fff'}}}
         />
         <Image
-          source={{ uri: 'assets/skype.png'}}
+          source={require('../assets/skype.png')}
           style={{width:50, height:50}}
-          onPress={ ()=> { Linking.openUrl('skype:')}}
         />
         <Button title="Open Skype" onPress={ ()=> { Linking.openURL('https://www.skype.com')}}/>
       </View>

@@ -78,7 +78,6 @@ class Checky extends React.PureComponent {
     render() {
         return(<CheckBox
             center
-            title='Completion Status'
             checkedIcon='dot-circle-o'
             uncheckedIcon='circle-o'
             uncheckedColor='blue'

@@ -1,4 +1,5 @@
 import React from 'react';
+import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton} from '../Themes/Themes.js';
 import {
   StyleSheet,
   Button,
@@ -18,36 +19,39 @@ export default class LearningAcademy extends React.Component {
     return (
 
     <SafeAreaView style={styles.container}>
-      <Text>
-      Learning Academy
-      </Text>
-      <View>
-        <Button
-          title="Application"
-          color="#f194ff"
-          onPress={() => {this.props.navigation.navigate('Application')}}
-          />
+      <TitleText text="Learning Academy">
+      </TitleText>
+      <View style={{flexDirection:"row"}}>
+        <Checky></Checky>
+            <SButton
+            title="Application"
+            color="#f194ff"
+            onPress={() => {this.props.navigation.navigate('Application')}}
+            />
       </View>
       <Separator />
-      <View>
-        <Button
-          title="Training Session"
-          color="#f194ff"
-          onPress={() => {this.props.navigation.navigate('TrainingVideo')}}
-        />
+      <View style={{flexDirection:"row"}}>
+        <Checky></Checky>
+            <SButton
+            title="Training Session"
+            color="#f194ff"
+            onPress={() => {this.props.navigation.navigate('TrainingVideo')}}
+            />
       </View>
       <Separator />
-      <View>
-        <Button
-          title="Mock Interviews"
-          color="#f194ff"
-          onPress={() =>{this.props.navigation.navigate('MockInterviews')}}
-        />
+      <View style={{flexDirection:"row"}}>
+        <Checky></Checky>
+            <SButton
+            title="Mock Interviews"
+            color="#f194ff"
+            onPress={() =>{this.props.navigation.navigate('MockInterviews')}}
+            />
       </View>
       <Separator />
 
-        <View style={styles.title}>
-          <Button
+      <View style={{flexDirection:"row"}}>
+        <Checky></Checky>
+          <SButton
             title="Resume Template and Review"
             color="#f194ff"
             onPress={() => {this.props.navigation.navigate('ResumeTemplates')}}
