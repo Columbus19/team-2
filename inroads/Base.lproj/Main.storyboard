@@ -1,24 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="UIReview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-1T-6py" customClass="BackgroundGradient" customModule="UIReview" customModuleProvider="target">
+                                <rect key="frame" x="40" y="79" width="334" height="738"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.42745098040000001" green="0.78823529410000004" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.26966048739999998" green="0.8389615265" blue="0.81812668290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                        <point key="value" x="0.10000000000000001" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                        <point key="value" x="0.5" y="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mi-AJ-YzH" customClass="BackgroundGradient" customModule="UIReview" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.42745098040000001" green="0.21143071663521129" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.27058823529411763" green="0.83921568627450982" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                        <point key="value" x="0.10000000000000001" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                        <point key="value" x="0.5" y="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INROADS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6v-TM-CAZ" userLabel="INROADS">
+                                <rect key="frame" x="92" y="124" width="230" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="emD-eM-h6T"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="kx1-4T-LK6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-q7-dq5">
+                                <rect key="frame" x="92" y="361" width="230" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GsZ-ui-eNC" userLabel="Email" customClass="CustomTextField" customModule="UIReview" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FSW-81-1W6"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="cXV-eF-wdM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JHL-iU-76Q" customClass="CustomTextField" customModule="UIReview" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="230" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="YQ2-Ls-4En"/>
+                                            <constraint firstAttribute="height" constant="40" id="jAn-FE-oeM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weg-QK-1w0" customClass="CustomButton" customModule="UIReview" customModuleProvider="target">
+                                <rect key="frame" x="92" y="522" width="230" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6uP-xy-Gwv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="Hlz-ev-Nma"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.26966048739999998" green="0.8389615265" blue="0.81812668290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="CTM-qH-Nf9" kind="show" id="jbK-0r-LGM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqn-p9-qbH">
+                                <rect key="frame" x="127.5" y="662" width="159" height="30"/>
+                                <state key="normal" title="I don't have an account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTr-eH-tsn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="weg-QK-1w0" secondAttribute="bottom" constant="300" id="5SU-la-3hF"/>
+                            <constraint firstItem="weg-QK-1w0" firstAttribute="centerX" secondItem="eCN-1T-6py" secondAttribute="centerX" id="6Nw-qq-0QY"/>
+                            <constraint firstItem="yqn-p9-qbH" firstAttribute="top" secondItem="weg-QK-1w0" secondAttribute="bottom" constant="100" id="9Cq-Yf-c84"/>
+                            <constraint firstAttribute="bottom" secondItem="3Mi-AJ-YzH" secondAttribute="bottom" id="KtW-Mu-AGT"/>
+                            <constraint firstItem="weg-QK-1w0" firstAttribute="leading" secondItem="wE8-q7-dq5" secondAttribute="leading" id="YwV-27-W3R"/>
+                            <constraint firstItem="a6v-TM-CAZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b9w-5a-7NF"/>
+                            <constraint firstItem="3Mi-AJ-YzH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dzp-go-uYp"/>
+                            <constraint firstItem="wE8-q7-dq5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fcw-ws-xOg"/>
+                            <constraint firstItem="eCN-1T-6py" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="jBt-mg-N2R"/>
+                            <constraint firstItem="3Mi-AJ-YzH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m0J-K8-QAF"/>
+                            <constraint firstItem="a6v-TM-CAZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="nKi-Qv-CKQ"/>
+                            <constraint firstItem="eCN-1T-6py" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="qxn-je-4u0"/>
+                            <constraint firstItem="wE8-q7-dq5" firstAttribute="top" secondItem="a6v-TM-CAZ" secondAttribute="bottom" constant="167" id="seC-Uh-ldM"/>
+                            <constraint firstItem="eCN-1T-6py" firstAttribute="centerY" secondItem="3Mi-AJ-YzH" secondAttribute="centerY" id="tYk-CI-ikV"/>
+                            <constraint firstItem="yqn-p9-qbH" firstAttribute="centerX" secondItem="weg-QK-1w0" secondAttribute="centerX" id="ucg-2P-Gvp"/>
+                            <constraint firstItem="3Mi-AJ-YzH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yiS-Em-Z0n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="I4c-c9-PfI">
+            <objects>
+                <viewController storyboardIdentifier="RegisterVC" id="CTM-qH-Nf9" customClass="RegisterViewController" customModule="UIReview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XEb-bK-RcW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FIg-rj-IfS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Thn-Ze-bzC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ike-au-LRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="22"/>
         </scene>
     </scenes>
 </document>

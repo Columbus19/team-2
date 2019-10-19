@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:inroads.xcodeproj">
+      location = "self:/Users/robert/Desktop/CFG/team-2/INROADS.xcodeproj">
    </FileRef>
 </Workspace>
