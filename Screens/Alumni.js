@@ -13,27 +13,21 @@ function Separator() {
   return <View style={styles.separator} />;
 }
 
-export default function App() {
+export default class Alumni extends React.Component {
+  render() {
   return (
     
     <SafeAreaView style={styles.container}>
       <Text> 
       Alumni Homepage
       </Text>
-      <View>
-        <Button
-          title="Application"
-          color="#f194ff"
-          onPress={() => {this.props.navigation.navigate('Application')}}
-        />
-        
-      </View>
+
       <Separator />
       <View>
         <Button
           title="Training Session"
           color="#f194ff"
-          onPress={() => {this.props.navigation.navigate('TrainingSessions')}}
+          onPress={() => {this.props.navigation.navigate('TrainingVideo')}}
         />
       </View>
       <Separator />
@@ -45,17 +39,10 @@ export default function App() {
         />
       </View>
       <Separator />
-
-        <View style={styles.title}>
-          <Button
-            title="Resume Template and Review"
-            color="#f194ff"
-            onPress={() => {this.props.navigation.navigate('Resumetemplates')}}
-        />
-        </View>
         
     </SafeAreaView>
   );
+  }
 }
 
 const styles = StyleSheet.create({
