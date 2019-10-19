@@ -6,7 +6,7 @@ import { CheckBox } from 'react-native-elements'
 
 const styles = StyleSheet.create({
     main: {
-      color: colors['primary'],
+      color: colors['text'],
       fontWeight: 'bold',
       fontSize: 60,
     },
@@ -19,13 +19,13 @@ const styles = StyleSheet.create({
       },
 
     h2 : {
-      color: colors['primary'],
+      color: colors['text'],
       fontWeight: 'bold',
       fontSize: 35,
     },
 
     btext: {
-      color: colors['primary'],
+      color: colors['text'],
       fontSize: 20,
     }
 });
@@ -70,7 +70,7 @@ class PTitle extends React.PureComponent {
 
 class RootContainer extends React.PureComponent {
     render () {
-        return(<View style={styles.container}>{this.props.children}</View>)
+        return(<View style={styles.container, backgroundColor='black'}>{this.props.children}</View>)
     }
 }
 
@@ -79,12 +79,12 @@ class Checky extends React.PureComponent {
         return(<CheckBox
             checkedIcon='dot-circle-o'
             uncheckedIcon='circle-o'
-            uncheckedColor='blue'
-            checkedColor='gold'
+            uncheckedColor={colors['secondary']}
+            checkedColor={colors['primary']}
             backgroundColor = 'black'
             checked={this.props.checked}
             containerStyle = {{borderRadius: 10, borderWidth : 2, borderColor : 'gold', flex: .1}}
-            textStyle = {{color : 'blue', fontWeight : 'bold'}}
+            textStyle = {{color : colors, fontWeight : 'bold'}}
           />)
     }
 }
@@ -96,11 +96,15 @@ class CButton extends React.PureComponent {
 
     render() {
         return(
-            <TouchableOpacity style={{backgroundColor:"gold", flex: .9, textAlign :"center", justifyContent: 'center', alignContent : 'center',
+            <TouchableOpacity style={{backgroundColor:'grey', flex: .9, textAlign :"center", justifyContent: 'center', 
+            alignContent : 'center', 
+            justifyContent:'space-around',
+            borderWidth : 1,
+            borderRadius : 8
             }}
             onPress = {this.props.onPress}
             >
-                <Text style={{fontSize: 20, color: 'blue'}}>{this.props.text}</Text>
+                <Text style={{fontSize: 20, color: colors['text']}}>{this.props.text}</Text>
              </TouchableOpacity>
         )
     }
@@ -114,14 +118,15 @@ class SButton extends React.PureComponent {
     render() {
         return(
             <View style ={{flexDirection : 'row'}}>
-                <Button color="gold" 
+                <Button color={colors['tertiary']}
                     title={this.props.title} 
                     titleStyle={{color : colors['primary']}}
-                    buttonStyle={{backgroundColor : 'gold'}}
+                    buttonStyle={{backgroundColor : colors['tertiary']}}
                     type = "outline"
                     onPress = {this.props.onPress}
                     containerStyle={{flex : 1
-                                    }}>
+                                    }}
+                    >
                 </Button>
             </View>
         )

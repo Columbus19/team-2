@@ -17,8 +17,6 @@ import colors from './Themes/Colors.js'
 import ResumeConfirmation from './Screens/ResumeConfirmation.js';
 import ResumeReview from './Screens/ResumeReview.js';
 
-
-
 class Loader extends React.Component{  
   render() {
     return (
@@ -77,9 +75,8 @@ const AppNavigator = createStackNavigator({
 }, {initialRouteName: "SignInit",
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: colors['primary'],
+        backgroundColor: colors['bgcolor'],
       },
-      headerTintColor: '#fff',
       headerTitleStyle: {
         fontWeight: 'bold',
       },
@@ -91,14 +88,11 @@ const AppNavigator = createStackNavigator({
                   height:50,
                   resizeMode:'cover'
                 }}/>
-          <Text style={{fontSize : 30, color: 'gold', fontWeight: 'bold'}}> INROADS </Text>
+          <Text style={{fontSize : 30, color: colors['text'], fontWeight: 'bold'}}> INROADS </Text>
          </View>
       )
     }
 });
-
-
-
 
 
 export default createAppContainer(AppNavigator);

@@ -10,6 +10,7 @@ import {
   Alert,
 } from 'react-native';
 import Constants from 'expo-constants';
+import colors from '../Themes/Colors.js'
 
 function Separator() {
   return <View style={styles.separator} />;
@@ -23,8 +24,8 @@ export default class LearningAcademy extends React.Component {
     render(){
     return (
 
-    <RootContainer>
-      <TitleText text = "CheckList" style={{flex: .1}} />
+    <View style={{flex: 1, justifyContent: 'space-around', backgroundColor: colors['bgcolor']}}>
+      <TitleText text = "Application Checklist" style={{flex: .1}} />
       
         <View style={{flexDirection:"row"}}>
               <Checky></Checky>
@@ -46,7 +47,7 @@ export default class LearningAcademy extends React.Component {
                 <CButton text="Resume Template and Review" onPress={() => {this.props.navigation.navigate('ResumeTemplates')}}></CButton>
         </View> 
 
-    </RootContainer>
+    </View>
  );
     }
 }

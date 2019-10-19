@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {WebView} from 'react-native';
 import {TitleText, BodyText, PTitle,RootContainer, Checky, SButton} from '../Themes/Themes.js';
+import colors from '../Themes/Colors.js'
 
 class MyWeb extends Component {
   render() {
@@ -19,8 +20,12 @@ class MyWeb extends Component {
 export default class Trainingvideo extends Component {
   render() {
     return (
-        <View style={{ height: 675, marginTop: 25 }}>
-          <TitleText text="Complete 2 Trainings!"></TitleText>
+        <View style={{ height: 675, backgroundColor: colors['bgcolor'], alignContent: 'center',  }}>
+          
+            <View style={{marginBottom: 15, marginTop: 5}}>
+              <PTitle text="Complete 2 Trainings!"></PTitle>
+            </View>
+
             <WebView
                     style={ styles.WebViewContainer }
                     javaScriptEnabled={true}

@@ -1,5 +1,8 @@
 export default {
-    'primary' : '#0000ff',
-    'secondary' : '#009900',
-    'text' : '#ffffff'
+    'primary' : '#DAA520',
+    'secondary' : 'blue',
+    'btext' : '#DAA520',
+    'text' : '#DAA520',
+    'tertiary' : 'grey',
+    'bgcolor' : '#37364A'
 }

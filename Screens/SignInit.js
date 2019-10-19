@@ -3,6 +3,7 @@ import { StyleSheet, TouchableHighlight, Text, View, Image, TextInput} from 'rea
 import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
 import { Button, ThemeProvider } from 'react-native-elements';
 import {TitleText, RootContainer, BodyText, PTitle, Checky, SButton} from '../Themes/Themes.js';
+import colors from '../Themes/Colors.js'
 
 export default class SignInit extends React.Component {
   constructor(props) {
@@ -64,8 +65,10 @@ const styles = StyleSheet.create({
   container: {
     marginTop: -50,
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center', 
+    backgroundColor: colors['bgcolor']
+    //#3B3A69
+    //#2E2C47
   },
 });

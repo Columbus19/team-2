@@ -4,7 +4,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation-stack
 import { Button, ThemeProvider } from 'react-native-elements';
 import {TitleText, RootContainer, BodyText, PTitle, Checky, SButton} from '../Themes/Themes.js';
 import { StackActions, NavigationActions } from 'react-navigation';
-
+import colors from '../Themes/Colors.js'
 
 export default class SignType extends React.Component {
   render() {
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 40,
-    backgroundColor: '#fff',
+    backgroundColor: colors['bgcolor'],
     alignItems: 'center',
     justifyContent: 'center',
   },
