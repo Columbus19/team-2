@@ -6,21 +6,23 @@ import SignInit from './Screens/SignInit.js';
 import SignType from './Screens/SignType.js';
 import MockInterviews from './Screens/MockInterviews.js';
 import TrainingVideo from './Screens/TrainingVideo.js';
-import MockInterviewsAlumni from './Screens/MockInterviewsAlumni.js';
-import Alumni from './Screens/Alumni.js';
-import LearningAcademy from './Screens/LearningAcademy.js';
-import ResumeTemplates from './Screens/ResumeTemplates.js';
+import MockInterviewsAlumni from './Screens/MockInterviewsAlumni.js'
+import Alumni from './Screens/Alumni.js'
+import LearningAcademy from './Screens/LearningAcademy.js'
+import ResumeTemplates from './Screens/ResumeTemplates.js'
+import Application from './Screens/Application/Application1.js'
+import BasicFlatList from './Screens/BasicFlatList.js'
 import Application1 from './Screens/Application/Application1.js';
 import ResumeConfirmation from './Screens/ResumeConfirmation.js';
 import ResumeReview from './Screens/ResumeReview.js';
 
 
 
-class Loader extends React.Component{
+class Loader extends React.Component{  
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-
+        
       </View>
     );
   }
@@ -28,19 +30,22 @@ class Loader extends React.Component{
 
 const AppNavigator = createStackNavigator({
   SignInit: {
-      screen: SignInit
+      screen: SignInit,
+      navigationOptions : {header: null}
   },
-  SignType: {
-      screen: SignType
+  SignType: { 
+      screen: SignType,
+      navigationOptions: {header: null}
   },
   MockInterviews: {
-      screen: MockInterviews
+      screen: MockInterviews,
   },
   // Application: {
   //   screen: Application
   // },
   MockInterviewsAlumni: {
-    screen: MockInterviewsAlumni
+    screen: MockInterviewsAlumni,
+    navigationOptions : {header: null}
   },
   TrainingVideo: {
     screen: TrainingVideo
@@ -49,7 +54,8 @@ const AppNavigator = createStackNavigator({
     screen: Alumni
   },
   LearningAcademy: {
-    screen: LearningAcademy
+    screen: LearningAcademy,
+    navigationOptions : {header: null}
   },
   ResumeTemplates: {
     screen: ResumeTemplates
@@ -63,6 +69,9 @@ const AppNavigator = createStackNavigator({
   ResumeReview: {
     screen: ResumeReview
   },
+  Client: {
+      screen: BasicFlatList 
+  }
 }, {initialRouteName: "SignInit"});
 
 

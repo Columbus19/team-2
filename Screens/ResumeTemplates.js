@@ -22,13 +22,16 @@ import {TitleText, RootContainer, BodyText, PTitle, Checky, SButton} from '../Th
 
 
 export default class SignInit extends React.Component {
-    
+  constructor(props) {
+    super(props);
+    this.state = {isLoading : true}
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-          <View>
-            <TitleText text="Resume Templates"></TitleText>        
-          </View>
+      <View style= {{justifyContent: 'center', alignContent: 'center'}}>
+          <TitleText text="Resume Templates"/>        
+
           <SButton title="View Resume Templates"
                 onPress={() => { Linking.openURL('https://templates.office.com/en-us/resumes-and-cover-letters')}}
                 />
@@ -46,7 +49,7 @@ const resume_style = StyleSheet.create({
     resizeMode: 'stretch'
   },
   hightlight: {
-    // width: 200, 
+    // width: 200,
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -57,7 +60,7 @@ const resume_style = StyleSheet.create({
   buttons: {
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',    
+    alignItems: 'center',
   }
 });
 const styles = StyleSheet.create({

@@ -8,7 +8,6 @@ export default class MockInterviews extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        
         <TitleText text="Mock Interviews for Students"></TitleText>
         <Image
           source={require('../assets/skype.png')}
@@ -24,8 +23,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
   },
   header: {
     fontSize: 30,
