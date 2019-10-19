@@ -106,7 +106,6 @@ class SButton extends React.PureComponent {
                 raised = "false"
                 containerStyle={{backgroundColor : 'red',
                                  borderRadius: 10, borderWidth : 2, borderColor : 'green'}}>
-
         </Button>)
     }
 }
