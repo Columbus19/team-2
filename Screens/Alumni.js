@@ -18,21 +18,22 @@ export default function App() {
     
     <SafeAreaView style={styles.container}>
       <Text> 
-      Learning Academy
+      Alumni Homepage
       </Text>
       <View>
         <Button
           title="Application"
           color="#f194ff"
-          onPress={() => {this.props.navigation.navigate('Application')}}/>
+          onPress={() => {this.props.navigation.navigate('Application')}}
         />
+        
       </View>
       <Separator />
       <View>
         <Button
           title="Training Session"
           color="#f194ff"
-          onPress={() => {this.props.navigation.navigate('Trainingsession')}}
+          onPress={() => {this.props.navigation.navigate('TrainingSessions')}}
         />
       </View>
       <Separator />
@@ -40,7 +41,7 @@ export default function App() {
         <Button
           title="Mock Interviews"
           color="#f194ff"
-          onPress={() =>{this.props.navigation.navigate('Trainingsession')}}
+          onPress={() => {this.props.navigation.navigate('MockInterviews')}}
         />
       </View>
       <Separator />
@@ -49,8 +50,8 @@ export default function App() {
           <Button
             title="Resume Template and Review"
             color="#f194ff"
-            onPress={() => Alert.alert('Left button pressed')}
-          />
+            onPress={() => {this.props.navigation.navigate('Resumetemplates')}}
+        />
         </View>
         
     </SafeAreaView>
