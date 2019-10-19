@@ -10,6 +10,7 @@ import MockInterviewsAlumni from './Screens/MockInterviewsAlumni.js'
 import Alumni from './Screens/Alumni.js'
 import LearningAcademy from './Screens/LearningAcademy.js'
 import ResumeTemplates from './Screens/ResumeTemplates.js'
+import Application from './Screens/Application/Application1.js'
 
 
 class Loader extends React.Component{
@@ -49,6 +50,9 @@ const AppNavigator = createStackNavigator({
   },
   ResumeTemplates: {
     screen: ResumeTemplates
+  },
+  Application: {
+    screen: Application
   },
 }, {initialRouteName: "SignInit"});
 
